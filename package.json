@@ -2,7 +2,8 @@
   "name": "opencmdfolder",
   "displayName": "Open Command Folder",
   "description": "Opens a command prompt window from the folder that the file currently opened is in",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "brookec",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -50,5 +51,9 @@
     "mocha": "^10.2.0",
     "typescript": "^5.2.2",
     "@vscode/test-electron": "^2.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brookec123/opencmdfolder.git"
   }
 }

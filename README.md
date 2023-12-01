@@ -1,35 +1,41 @@
-# opencmdfolder README
+# Open Command Folder
 
-This is the README for your extension "opencmdfolder". After writing up a brief description, we recommend including the following sections.
+Opens a command prompt window from the folder that the currently opened file is in.
 
 ## Features
 
+- Quickly open a command prompt window in the folder of the active file.
+- Default keyboard shortcut: `Ctrl+Alt+C` (Windows).
 
+## Usage
+
+1. Open a file in Visual Studio Code.
+2. Use the keyboard shortcut `Ctrl+Alt+C` on Windows to open a command prompt window in the file's folder.
 
 ## Requirements
 
-Currently, you must have a Windows OS.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- Visual Studio Code version 1.84.0 or higher.
+- Windows OS
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- This extension currently supports Windows only. Support for macOS and Linux is planned in future updates.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
+
+- Initial release with basic functionality.
 
 ### 1.0.0
 
-Initial release of opencmdfolder
+- Removed output from running python file.
 
+## Contributing
+
+If you encounter any issues or have suggestions for improvements, feel free to [open an issue](https://github.com/brookec123/opencmdfolder/issues) on GitHub.
+
+
+---
+
+**Enjoy!**
