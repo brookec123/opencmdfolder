@@ -4,23 +4,24 @@ import subprocess
 import time
 
 def open_cmd_window(folder_path):
-
-    # Determine the platform
     platform = sys.platform
 
-    # Use the appropriate command based on the platform
     if platform == "win32":
         cmd_command = f'start cmd /K cd /D "{folder_path}"'
+        cleanup_command = 'cls'
+    elif platform == "darwin":
+        cmd_command = f'open "{folder_path}"'
+        cleanup_command = 'clear'
+    elif platform.startswith("linux"):
+        cmd_command = f'xdg-open "{folder_path}"'
+        cleanup_command = 'clear'
     else:
-        print(f"Error: {e}")
+        print(f"Unsupported platform: {platform}")
+        return
 
     try:
         subprocess.Popen(cmd_command, shell=True)
-         # Wait for a short duration (e.g., 2 seconds) for the command prompt to open
         time.sleep(2)
-
-        # Add a cleanup command (e.g., 'cls' to clear the command prompt)
-        cleanup_command = 'cls'
         subprocess.run(cleanup_command, shell=True)
     except Exception as e:
         print(f"Error: {e}")
